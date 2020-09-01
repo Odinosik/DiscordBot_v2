@@ -1,4 +1,5 @@
 ﻿using DiscordBot.Commands;
+using DiscordBot.Helper;
 using DSharpPlus;
 using DSharpPlus.CommandsNext;
 using DSharpPlus.EventArgs;
@@ -28,6 +29,10 @@ namespace DiscordBot
                 json = await sr.ReadToEndAsync().ConfigureAwait(false);
 
             var configjson = JsonConvert.DeserializeObject<ConfigJson>(json);
+
+            ConfigHelper.Token = configjson.Token;
+            ConfigHelper.GiphyToken = configjson.GiphyToken;
+
             var config = new DiscordConfiguration
             {
                 Token = configjson.Token,

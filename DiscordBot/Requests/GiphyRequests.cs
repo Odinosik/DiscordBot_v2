@@ -1,4 +1,5 @@
-﻿using DiscordBot.ResponseJson;
+﻿using DiscordBot.Helper;
+using DiscordBot.ResponseJson;
 using Newtonsoft.Json;
 using RestSharp;
 
@@ -6,7 +7,7 @@ namespace DiscordBot.Requests
 {
     public class GiphyRequests
     {
-        private string giphyToken = "5V8GALqan9eBuBArVDZD297W6IDBrPP5";
+        private string giphyToken = ConfigHelper.GiphyToken;
 
         public string SendRequestRandomGif(string tag)
         {
@@ -16,8 +17,8 @@ namespace DiscordBot.Requests
             request.AddParameter("tag", tag);
             request.AddParameter("rating", "pg");
             var response = client.Get(request);
-            GiphyModelResponse Data = JsonConvert.DeserializeObject<GiphyModelResponse>(response.Content);
-            return Data.data.url;
+            GiphyModelResponse giphyModelResponse = JsonConvert.DeserializeObject<GiphyModelResponse>(response.Content);
+            return giphyModelResponse.data.url;
         }
     }
 }

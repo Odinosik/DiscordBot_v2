@@ -20,13 +20,13 @@ config.json
 *.rar
 *.tar
 *.zip
-
+*.cashe
 # Logs and databases #
 ######################
 *.log
 *.sql
 *.sqlite
-
+*.assets.json
 # OS generated files #
 ######################
 .DS_Store

@@ -1,10 +1,14 @@
-﻿using DiscordBot.Requests;
+﻿using DiscordBot.Attributes;
+using DiscordBot.Handlers.Dialogue;
+using DiscordBot.Handlers.Dialogue.Steps;
+using DiscordBot.Requests;
 using DSharpPlus.CommandsNext;
 using DSharpPlus.CommandsNext.Attributes;
 using DSharpPlus.Entities;
 using DSharpPlus.Interactivity;
 using System;
 using System.Collections.Generic;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -12,6 +16,7 @@ namespace DiscordBot.Commands
 {
     class FunCommands : BaseCommandModule
     {
+        [RequireCategories(ChannelCheckMode.None,"aba")]
         [Command("ping")]
         [Description("Pong")]
         public async Task Ping(CommandContext ctx)
@@ -84,6 +89,85 @@ namespace DiscordBot.Commands
             };
 
             await ctx.Channel.SendMessageAsync(content: urlGif);
+        }
+
+        [Command("dialogue"), Description("Send Random Gif")]
+        public async Task Dialogue(CommandContext ctx)
+        {
+            var thirdStep = new TextStep("Enter something sad!", null);
+            var secondStep = new TextStep("Enter something boring!", thirdStep);
+            var inputStep = new TextStep("Enter something interesting!", secondStep);
+            var funnyStep = new IntStep("Haha funny",null,4,10);
+
+            string input = string.Empty;
+            int value = 0;
+
+
+            funnyStep.OnValidResult += (result) => value = result;
+
+            var userChannel = await ctx.Member.CreateDmChannelAsync().ConfigureAwait(false);
+
+            var inputDialogueHandler = new DialogueHandler(ctx.Client, userChannel, ctx.User, inputStep);
+
+            List<DiscordMessage> dialogue =  inputDialogueHandler.GetDialogue();
+
+            bool succeded = await inputDialogueHandler.ProcessDialogue().ConfigureAwait(false);
+
+            StringBuilder inputDialogue = new StringBuilder();
+
+
+            foreach (var message in dialogue)
+            {
+                inputDialogue.Append($"** {message.Content} ** \n");
+            }
+
+            var finalEmbed = new DiscordEmbedBuilder
+            {
+                Description = inputDialogue.ToString(),
+                Color = DiscordColor.DarkBlue,
+                Title = "Dialogue"
+            };
+
+            if (!succeded)
+            {
+                return;
+            }
+
+            await ctx.Channel.SendMessageAsync(embed : finalEmbed).ConfigureAwait(false);
+
+            await ctx.Channel.SendMessageAsync(value.ToString()).ConfigureAwait(false);
+
+        }
+
+        [Command("dialoguePoll"), Description("Create Poll")]
+        public async Task DialoguePoll(CommandContext ctx, TimeSpan? timespan)
+        {
+
+            var pollEmbed = new DiscordEmbedBuilder
+            {
+                Title = "Create Poll",
+                Color = DiscordColor.DarkBlue
+            };
+
+            var userChannel = await ctx.Member.CreateDmChannelAsync().ConfigureAwait(false);
+
+            var pollMessage = await userChannel.SendMessageAsync(embed: pollEmbed).ConfigureAwait(false);
+
+            var pollStep = new PollStep("Send to me options in poll", null, pollMessage, pollEmbed);
+
+            var inputDialogueHandler = new DialogueHandler(ctx.Client, userChannel, ctx.User, pollStep);
+
+            bool succeded = await inputDialogueHandler.ProcessDialogue().ConfigureAwait(false);
+
+            if (!succeded)
+            {
+                return;
+            }
+
+            var interactivity = ctx.Client.GetInteractivity();
+            var emoji = DiscordEmoji.FromName(ctx.Client,":1:");
+
+            var channelMessage = await ctx.Channel.SendMessageAsync(embed : pollStep.GetPollMessage()).ConfigureAwait(false);
         }
     }
 }

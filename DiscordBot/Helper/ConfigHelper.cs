@@ -10,5 +10,6 @@ namespace DiscordBot.Helper
         public static string Token { get; set; }
 
         public static string GiphyToken { get; set; }
+        public static string LolToken { get; set; }
     }
 }

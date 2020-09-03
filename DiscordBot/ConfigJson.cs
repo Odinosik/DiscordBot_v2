@@ -1,7 +1,4 @@
 ﻿using Newtonsoft.Json;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace DiscordBot
 {
@@ -16,5 +13,8 @@ namespace DiscordBot
 
         [JsonProperty("giphytoken")]
         public string GiphyToken { get; private set; }
+
+        [JsonProperty("loltoken")]
+        public string LolToken { get; private set; }
     }
 }

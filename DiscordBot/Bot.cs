@@ -32,6 +32,7 @@ namespace DiscordBot
 
             ConfigHelper.Token = configjson.Token;
             ConfigHelper.GiphyToken = configjson.GiphyToken;
+            ConfigHelper.LolToken = configjson.LolToken;
 
             var config = new DiscordConfiguration
             {
@@ -59,6 +60,8 @@ namespace DiscordBot
             Commands = Client.UseCommandsNext(commandsConfig);
 
             Commands.RegisterCommands<FunCommands>();
+            Commands.RegisterCommands<TeamCommands>();
+            Commands.RegisterCommands<LolCommands>();
 
             await Client.ConnectAsync();
             await Task.Delay(-1);

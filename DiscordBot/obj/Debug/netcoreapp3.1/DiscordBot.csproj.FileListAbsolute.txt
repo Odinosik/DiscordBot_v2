@@ -23,9 +23,9 @@ C:\Users\hub\source\repos\DiscordBot\DiscordBot\bin\Debug\netcoreapp3.1\runtimes
 C:\Users\hub\source\repos\DiscordBot\DiscordBot\obj\Debug\netcoreapp3.1\DiscordBot.csprojAssemblyReference.cache
 C:\Users\hub\source\repos\DiscordBot\DiscordBot\obj\Debug\netcoreapp3.1\DiscordBot.AssemblyInfoInputs.cache
 C:\Users\hub\source\repos\DiscordBot\DiscordBot\obj\Debug\netcoreapp3.1\DiscordBot.AssemblyInfo.cs
-C:\Users\hub\source\repos\DiscordBot\DiscordBot\obj\Debug\netcoreapp3.1\DiscordBot.csproj.CoreCompileInputs.cache
 C:\Users\hub\source\repos\DiscordBot\DiscordBot\obj\Debug\netcoreapp3.1\DiscordBot.csproj.CopyComplete
 C:\Users\hub\source\repos\DiscordBot\DiscordBot\obj\Debug\netcoreapp3.1\DiscordBot.dll
 C:\Users\hub\source\repos\DiscordBot\DiscordBot\obj\Debug\netcoreapp3.1\DiscordBot.pdb
 C:\Users\hub\source\repos\DiscordBot\DiscordBot\obj\Debug\netcoreapp3.1\DiscordBot.genruntimeconfig.cache
 C:\Users\hub\source\repos\DiscordBot\DiscordBot\bin\Debug\netcoreapp3.1\Settings.job
+C:\Users\hub\source\repos\DiscordBot\DiscordBot\obj\Debug\netcoreapp3.1\DiscordBot.csproj.CoreCompileInputs.cache

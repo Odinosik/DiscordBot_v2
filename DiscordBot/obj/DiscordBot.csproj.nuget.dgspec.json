@@ -23,7 +23,8 @@
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {},
-          "https://nuget.emzi0767.com/api/v3/index.json": {}
+          "https://nuget.emzi0767.com/api/v3/index.json": {},
+          "https://www.myget.org/F/dsharpplus-nightly/api/v3/index.json": {}
         },
         "frameworks": {
           "netcoreapp3.1": {
@@ -41,7 +42,7 @@
           "dependencies": {
             "DSharpPlus": {
               "target": "Package",
-              "version": "[4.0.0-nightly-00720, )"
+              "version": "[4.0.0-nightly-00721, )"
             },
             "DSharpPlus.CommandsNext": {
               "target": "Package",

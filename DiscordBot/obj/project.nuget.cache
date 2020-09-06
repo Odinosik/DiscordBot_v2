@@ -1,10 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "ohTqVsov/wp9WDvOmTZ/oKiMGA6JrJlK1ykqX6ikiMNE92o2Bu+Q8FQ1Gu2yyry2eU1RnnadWW66M5A05F1e8Q==",
+  "dgSpecHash": "2F655KpDEEvL95XpO8N5Bl9Hsn6XjwsS1Qodrlnu3xIbDX4WDUFmBmrA5zM4zvyTXWOXj7babgZdH3esNAIkXg==",
   "success": true,
   "projectFilePath": "C:\\Users\\hub\\source\\repos\\DiscordBot\\DiscordBot\\DiscordBot.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\hub\\.nuget\\packages\\dsharpplus\\4.0.0-nightly-00720\\dsharpplus.4.0.0-nightly-00720.nupkg.sha512",
+    "C:\\Users\\hub\\.nuget\\packages\\dsharpplus\\4.0.0-nightly-00721\\dsharpplus.4.0.0-nightly-00721.nupkg.sha512",
     "C:\\Users\\hub\\.nuget\\packages\\dsharpplus.commandsnext\\4.0.0-nightly-00720\\dsharpplus.commandsnext.4.0.0-nightly-00720.nupkg.sha512",
     "C:\\Users\\hub\\.nuget\\packages\\dsharpplus.interactivity\\4.0.0-nightly-00720\\dsharpplus.interactivity.4.0.0-nightly-00720.nupkg.sha512",
     "C:\\Users\\hub\\.nuget\\packages\\dsharpplus.lavalink\\4.0.0-nightly-00720\\dsharpplus.lavalink.4.0.0-nightly-00720.nupkg.sha512",

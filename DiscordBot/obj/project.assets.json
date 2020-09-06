@@ -2,7 +2,7 @@
   "version": 3,
   "targets": {
     ".NETCoreApp,Version=v3.1": {
-      "DSharpPlus/4.0.0-nightly-00720": {
+      "DSharpPlus/4.0.0-nightly-00721": {
         "type": "package",
         "dependencies": {
           "Emzi0767.Common": "2.1.1",
@@ -1278,13 +1278,13 @@
     }
   },
   "libraries": {
-    "DSharpPlus/4.0.0-nightly-00720": {
-      "sha512": "d6bhORMbxUitNLrxSjD45ak+5BcM5wNlcqaNeRKWd+rx7hZAwA+CpYvMv2VNCRSpjmt3NjzN9yzHmjazoMffEw==",
+    "DSharpPlus/4.0.0-nightly-00721": {
+      "sha512": "ejT4rVVyz0DK4f8c4G0cNuHSsAO7+1xhmfGKv2M0TKb1A2edAgpygdQiM0tLcB6Org3qll+cGGqXC/UTnC8bAg==",
       "type": "package",
-      "path": "dsharpplus/4.0.0-nightly-00720",
+      "path": "dsharpplus/4.0.0-nightly-00721",
       "files": [
         ".nupkg.metadata",
-        "dsharpplus.4.0.0-nightly-00720.nupkg.sha512",
+        "dsharpplus.4.0.0-nightly-00721.nupkg.sha512",
         "dsharpplus.nuspec",
         "lib/netstandard1.3/DSharpPlus.dll",
         "lib/netstandard1.3/DSharpPlus.xml",
@@ -4323,7 +4323,7 @@
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
-      "DSharpPlus >= 4.0.0-nightly-00720",
+      "DSharpPlus >= 4.0.0-nightly-00721",
       "DSharpPlus.CommandsNext >= 4.0.0-nightly-00720",
       "DSharpPlus.Interactivity >= 4.0.0-nightly-00720",
       "DSharpPlus.Lavalink >= 4.0.0-nightly-00720",
@@ -4353,7 +4353,8 @@
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {},
-        "https://nuget.emzi0767.com/api/v3/index.json": {}
+        "https://nuget.emzi0767.com/api/v3/index.json": {},
+        "https://www.myget.org/F/dsharpplus-nightly/api/v3/index.json": {}
       },
       "frameworks": {
         "netcoreapp3.1": {
@@ -4371,7 +4372,7 @@
         "dependencies": {
           "DSharpPlus": {
             "target": "Package",
-            "version": "[4.0.0-nightly-00720, )"
+            "version": "[4.0.0-nightly-00721, )"
           },
           "DSharpPlus.CommandsNext": {
             "target": "Package",

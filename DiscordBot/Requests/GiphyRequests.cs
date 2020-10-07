@@ -7,7 +7,7 @@ namespace DiscordBot.Requests
 {
     public class GiphyRequests
     {
-        private string giphyToken = ConfigHelper.GiphyToken;
+        private string giphyToken = ConfigJson.GiphyToken;
 
         public string SendRequestRandomGif(string tag)
         {

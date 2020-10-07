@@ -21,7 +21,7 @@
     },
     "resourceName": {
       "type": "string",
-      "defaultValue": "DiscordBot20200906123740",
+      "defaultValue": "DiscordBot20200913171533",
       "metadata": {
         "description": "Name of the main resource to be created by this template."
       }

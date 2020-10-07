@@ -8,7 +8,7 @@
     ".NETCoreApp,Version=v3.1": {
       "DiscordBot/1.0.0": {
         "dependencies": {
-          "DSharpPlus": "4.0.0-nightly-00720",
+          "DSharpPlus": "4.0.0-nightly-00721",
           "DSharpPlus.CommandsNext": "4.0.0-nightly-00720",
           "DSharpPlus.Interactivity": "4.0.0-nightly-00720",
           "DSharpPlus.Lavalink": "4.0.0-nightly-00720",
@@ -19,7 +19,7 @@
           "DiscordBot.dll": {}
         }
       },
-      "DSharpPlus/4.0.0-nightly-00720": {
+      "DSharpPlus/4.0.0-nightly-00721": {
         "dependencies": {
           "Emzi0767.Common": "2.1.1",
           "Microsoft.Extensions.Logging.Abstractions": "3.1.5",
@@ -32,14 +32,14 @@
         },
         "runtime": {
           "lib/netstandard2.0/DSharpPlus.dll": {
-            "assemblyVersion": "4.0.0.720",
-            "fileVersion": "4.0.0.720"
+            "assemblyVersion": "4.0.0.721",
+            "fileVersion": "4.0.0.721"
           }
         }
       },
       "DSharpPlus.CommandsNext/4.0.0-nightly-00720": {
         "dependencies": {
-          "DSharpPlus": "4.0.0-nightly-00720",
+          "DSharpPlus": "4.0.0-nightly-00721",
           "Microsoft.Extensions.DependencyInjection": "3.1.1"
         },
         "runtime": {
@@ -51,7 +51,7 @@
       },
       "DSharpPlus.Interactivity/4.0.0-nightly-00720": {
         "dependencies": {
-          "DSharpPlus": "4.0.0-nightly-00720"
+          "DSharpPlus": "4.0.0-nightly-00721"
         },
         "runtime": {
           "lib/netstandard2.0/DSharpPlus.Interactivity.dll": {
@@ -62,7 +62,7 @@
       },
       "DSharpPlus.Lavalink/4.0.0-nightly-00720": {
         "dependencies": {
-          "DSharpPlus": "4.0.0-nightly-00720"
+          "DSharpPlus": "4.0.0-nightly-00721"
         },
         "runtime": {
           "lib/netstandard2.0/DSharpPlus.Lavalink.dll": {
@@ -73,7 +73,7 @@
       },
       "DSharpPlus.VoiceNext/4.0.0-nightly-00720": {
         "dependencies": {
-          "DSharpPlus": "4.0.0-nightly-00720",
+          "DSharpPlus": "4.0.0-nightly-00721",
           "DSharpPlus.VoiceNext.Natives": "1.0.0"
         },
         "runtime": {
@@ -768,12 +768,12 @@
       "serviceable": false,
       "sha512": ""
     },
-    "DSharpPlus/4.0.0-nightly-00720": {
+    "DSharpPlus/4.0.0-nightly-00721": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-d6bhORMbxUitNLrxSjD45ak+5BcM5wNlcqaNeRKWd+rx7hZAwA+CpYvMv2VNCRSpjmt3NjzN9yzHmjazoMffEw==",
-      "path": "dsharpplus/4.0.0-nightly-00720",
-      "hashPath": "dsharpplus.4.0.0-nightly-00720.nupkg.sha512"
+      "sha512": "sha512-ejT4rVVyz0DK4f8c4G0cNuHSsAO7+1xhmfGKv2M0TKb1A2edAgpygdQiM0tLcB6Org3qll+cGGqXC/UTnC8bAg==",
+      "path": "dsharpplus/4.0.0-nightly-00721",
+      "hashPath": "dsharpplus.4.0.0-nightly-00721.nupkg.sha512"
     },
     "DSharpPlus.CommandsNext/4.0.0-nightly-00720": {
       "type": "package",

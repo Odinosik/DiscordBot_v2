@@ -1,15 +1,15 @@
 ﻿using System;
-using System.Transactions;
+using System.Threading.Tasks;
 
 namespace DiscordBot
 {
-    class Program
+    public class Program
     {
-        static void Main(string[] args)
+        public static async Task Main(string[] args)
         {
             Console.WriteLine("Hello World!");
             var bot = new Bot();
-            bot.RunAsync().GetAwaiter().GetResult();
+            await bot.RunAsync();
         }
     }
 }

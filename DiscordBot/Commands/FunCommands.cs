@@ -73,20 +73,13 @@ namespace DiscordBot.Commands
         }
 
         [Command("gif"), Description("Send Random Gif")]
-        public async Task Gif(CommandContext ctx)
+        public async Task Gif(CommandContext ctx, params string[] tagParam)
         {
+            string tag = string.Join(" ", tagParam);
             await ctx.TriggerTypingAsync();
 
-            string[] GIFtype = { "cat", "dog" };
-
             var giphyRequest = new GiphyRequests();
-            string urlGif = giphyRequest.SendRequestRandomGif(GIFtype[0]);
-
-            var embed = new DiscordEmbedBuilder
-            {
-                Title = GIFtype[0],
-                Url = urlGif
-            };
+            string urlGif = giphyRequest.SendRequestRandomGif(string.Join(" ",tag));
 
             await ctx.Channel.SendMessageAsync(content: urlGif);
         }
@@ -168,6 +161,12 @@ namespace DiscordBot.Commands
             var emoji = DiscordEmoji.FromName(ctx.Client,":1:");
 
             var channelMessage = await ctx.Channel.SendMessageAsync(embed : pollStep.GetPollMessage()).ConfigureAwait(false);
+        }
+        
+        [Command("checkVersion"), Description("Check Version Bot")]
+        public async Task CheckVersion (CommandContext ctx)
+        {
+            await ctx.Channel.SendMessageAsync("Wersja z configiem");
         }
     }
 }

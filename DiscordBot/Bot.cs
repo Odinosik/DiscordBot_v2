@@ -24,19 +24,11 @@ namespace DiscordBot
         public async Task RunAsync()
         {
             var json = string.Empty;
-            using (var fs = File.OpenRead("config.json"))
-            using (var sr = new StreamReader(fs, new UTF8Encoding(false)))
-                json = await sr.ReadToEndAsync().ConfigureAwait(false);
 
-            var configjson = JsonConvert.DeserializeObject<ConfigJson>(json);
-
-            ConfigHelper.Token = configjson.Token;
-            ConfigHelper.GiphyToken = configjson.GiphyToken;
-            ConfigHelper.LolToken = configjson.LolToken;
 
             var config = new DiscordConfiguration
             {
-                Token = configjson.Token,
+                Token = ConfigJson.Token,
                 TokenType = TokenType.Bot,
                 AutoReconnect = true,
                 MinimumLogLevel = LogLevel.Debug,
@@ -51,7 +43,7 @@ namespace DiscordBot
 
             var commandsConfig = new CommandsNextConfiguration
             {
-                StringPrefixes = new string[] { configjson.Prefix },
+                StringPrefixes = new string[] { ConfigJson.Prefix },
                 EnableMentionPrefix = true,
                 EnableDms = false,
                 DmHelp = true,

@@ -28,4 +28,5 @@ C:\Users\hub\source\repos\DiscordBot\DiscordBot\obj\Debug\netcoreapp3.1\DiscordB
 C:\Users\hub\source\repos\DiscordBot\DiscordBot\obj\Debug\netcoreapp3.1\DiscordBot.pdb
 C:\Users\hub\source\repos\DiscordBot\DiscordBot\obj\Debug\netcoreapp3.1\DiscordBot.genruntimeconfig.cache
 C:\Users\hub\source\repos\DiscordBot\DiscordBot\bin\Debug\netcoreapp3.1\Settings.job
+C:\Users\hub\source\repos\DiscordBot\DiscordBot\bin\Debug\netcoreapp3.1\HtmlAgilityPack.dll
 C:\Users\hub\source\repos\DiscordBot\DiscordBot\obj\Debug\netcoreapp3.1\DiscordBot.csproj.CoreCompileInputs.cache

@@ -4,10 +4,6 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
   <ItemGroup>
-    <None Include="bin\Debug\netcoreapp3.1\config.json" />
-    <None Include="bin\Release\netcoreapp3.1\config.json" />
-  </ItemGroup>
-  <ItemGroup>
     <PackageReference Include="DSharpPlus" Version="4.0.0-nightly-00721" />
     <PackageReference Include="DSharpPlus.CommandsNext" Version="4.0.0-nightly-00720" />
     <PackageReference Include="DSharpPlus.Interactivity" Version="4.0.0-nightly-00720" />
@@ -20,5 +16,9 @@
     <None Update="Settings.job">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bin\Debug\netcoreapp3.1\" />
+    <Folder Include="bin\Release\netcoreapp3.1\" />
   </ItemGroup>
 </Project>
